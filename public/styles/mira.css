@@ -31,3 +31,60 @@
 .modal-input {
     font-size: 14px;
 }
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+    height: 100px;
+    background: #ffffff;
+    border-bottom: 1px solid lightskyblue;
+}
+
+.middle {
+    overflow: auto;
+    height: auto;
+    padding: .5rem;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.left {
+    width: 300px;
+    margin-left: -15px;
+    border-right: 1px solid lightskyblue;
+    overflow: auto;
+    height: auto;
+    /* padding: .5rem; */
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    padding-left: 20px;
+}
+
+.left::-webkit-scrollbar,
+.middle::-webkit-scrollbar {
+    display: none;
+}
+
+.app-text {
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid lightskyblue;
+    font-size: 14px;
+}
+
+.body-container {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+}

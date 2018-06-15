@@ -1,12 +1,51 @@
 [
     {
-        "appName": "pooja",
-        "appVersion": "2.1",
-        "updateType": "Technical"
+        "appName": "sadhana",
+        "appVersion": "3.1",
+        "appUpdateType": "Technical",
+        "appId": "SAD3.1TU",
+        "date": "6/15/2018, 6:43:07 PM"
     },
     {
         "appName": "sambhaji",
-        "appVersion": "",
-        "updateType": "Server"
+        "appVersion": "4.5",
+        "appUpdateType": "Server",
+        "appId": "SAM4.5SU",
+        "date": "6/15/2018, 7:15:53 PM"
+    },
+    {
+        "appName": "rutuja",
+        "appVersion": "5.0",
+        "appUpdateType": "Server",
+        "appId": "RUT5.0SU",
+        "date": "6/15/2018, 7:16:51 PM"
+    },
+    {
+        "appName": "sharvari",
+        "appVersion": "6.9",
+        "appUpdateType": "Technical",
+        "appId": "SHA6.9TU",
+        "date": "6/15/2018, 7:23:06 PM"
+    },
+    {
+        "appName": "minal",
+        "appVersion": "33",
+        "appUpdateType": "Technical",
+        "appId": "MIN33TU",
+        "date": "6/15/2018, 9:06:03 PM"
+    },
+    {
+        "appName": "soni",
+        "appVersion": "45",
+        "appUpdateType": "Technical",
+        "appId": "SON45TU",
+        "date": "6/15/2018, 9:07:09 PM"
+    },
+    {
+        "appName": "madhuri",
+        "appVersion": "69",
+        "appUpdateType": "Server",
+        "appId": "MAD69SU",
+        "date": "6/15/2018, 10:09:38 PM"
     }
 ]
