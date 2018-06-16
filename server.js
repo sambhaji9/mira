@@ -49,7 +49,7 @@ app.get("/getAppDetail", function(request, response) {
         if (request.query.appId === app.appId)
             return app;
     });
-    response.send(appDetail);
+    response.send(appDetail[0]);
 });
 
 app.listen(1689, function() {

@@ -13,6 +13,7 @@
 
     <script src="./scripts/serverjax.js"></script>
     <link rel="stylesheet" href="./styles/mira.css">
+    <link rel="stylesheet" type="text/css" href="./lib/css/fontawesome-all.css">
 
 </head>
 
@@ -21,9 +22,15 @@
         <div class="header-container">
             <h3 id="header" class="header-text"></h3>
             <h6 id="subHeader" class="sub-header-text"></h6>
+            <button type="button" class="btn btn-outline-success new-version-button" data-toggle="modal" data-target="#newStoryModal">
+                <i class="icon far fa-plus-square"></i>
+                Story
+            </button>
         </div>
         <div style="width:100%">
-            <button type="button" class="btn btn-outline-success new-app-button" data-toggle="modal" data-target="#newAppModal">New App</button>
+            <button type="button" class="btn btn-outline-success new-app-button" data-toggle="modal" data-target="#newAppModal">
+                <i class="icon far fa-plus-square"></i>
+                App</button>
         </div>
 
     </div>
@@ -43,7 +50,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h6 class="modal-title">
-                        Add New App
+                        New App
                     </h6>
                 </div>
                 <div class="modal-body">
@@ -106,6 +113,83 @@
             </div>
         </div>
     </div>
+
+    <!-- New version modal -->
+    <div class="modal fade" id="newStoryModal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="newStoryModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">
+                        New Story
+                    </h6>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <table class="modal-table">
+                            <tr>
+                                <td class="modal-cell">Label</td>
+                                <td class="modal-cell">
+                                    <input id="storyLabel" class="form-control modal-input" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="modal-cell">Description</td>
+                                <td class="modal-cell">
+                                    <textarea id="storyDescription" class="form-control modal-input" type="text"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="modal-cell">Type</td>
+                                <td class="modal-cell">
+                                    <select id="storyType" class="modal-select">
+                                        <option class="dropdown-item">Bug</option>
+                                        <option class="dropdown-item">To-do</option>
+                                        <option class="dropdown-item">Event</option>
+                                        <option class="dropdown-item">Change request</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="modal-cell">Status</td>
+                                <td class="modal-cell">
+                                    <select id="storyStatus" class="modal-select">
+                                        <option class="dropdown-item">Requirements</option>
+                                        <option class="dropdown-item">Waiting</option>
+                                        <option class="dropdown-item">In-progress</option>
+                                        <option class="dropdown-item">Paused</option>
+                                        <option class="dropdown-item">Done</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="modal-cell">Assigne</td>
+                                <td class="modal-cell">
+                                    <select id="storyAssigne" class="modal-select">
+                                        <option class="dropdown-item">Self</option>
+                                        <option class="dropdown-item">Editors</option>
+                                        <option class="dropdown-item">Web production</option>
+                                        <option class="dropdown-item">Production Programmers</option>
+                                        <option class="dropdown-item">Modules</option>
+                                        <option class="dropdown-item">Quality</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="modal-cell">Deadline</td>
+                                <td class="modal-cell">
+                                    <input id="storyDeadline" class="form-control modal-input" type="text" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal-button" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary modal-button" id="saveNewApp">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
-</html>
+</html>s

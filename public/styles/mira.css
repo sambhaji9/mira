@@ -4,6 +4,13 @@
     margin: 10px;
 }
 
+.new-version-button {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: none;
+}
+
 .modal-table {
     width: 100%;
 }
@@ -87,4 +94,24 @@
     width: 100%;
     backface-visibility: hidden;
     will-change: overflow;
+}
+
+.header-container {
+    width: 300px;
+    display: none;
+    margin-left: 50px;
+}
+
+.header-text {
+    text-align: left;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.sub-header-text {
+    text-align: right;
+    margin-right: 10px;
+    justify-content: flex-end;
+    font-style: italic;
+    font-size: 16px;
 }

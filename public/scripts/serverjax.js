@@ -24,6 +24,11 @@ $(document).ready(function() {
         $("#appName").trigger("focus");
     });
 
+    $("#newStoryModal").on("shown.bs.modal", function() {
+        $("#storyLabel").trigger("focus");
+        console.log(selectedApp);
+    });
+
     $("#appUpdateType").on("change", function() {
         if (appName.value !== "" && appVersion.value !== "" && appUpdateType.value !== "")
             generateAppId();
@@ -170,6 +175,10 @@ var selectedApp = {};
  * @param {object} appObj 
  */
 function showAppDetail(appObj) {
-    selectedApp = appObj;
-    console.log(selectedApp);
+    selectedApp = JSON.parse(appObj);
+    document.getElementsByClassName("header-container")[0].style.display = "block";
+    // show the header
+    document.getElementById("header").innerHTML = selectedApp.appName + ", " + selectedApp.appVersion;
+    // show the version
+    //document.getElementById("subHeader").innerHTML = selectedApp.appVersion;
 }
