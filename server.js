@@ -77,6 +77,34 @@ app.get("/addNewStory", function(request, response) {
     response.send(mFileContent);
 });
 
+app.get("/updateStory", function(request, response) {
+    // read the file
+    var fileContent = fileSys.readFileSync("./public/files/" + request.query.mSelectedAppId + ".json", "utf-8");
+    // parse the array
+    var storyArray = JSON.parse(fileContent);
+
+    var storyDetail = storyArray.filter(function(storyObj) {
+        if (request.query.mStoryId.toString() === storyObj.storyId.toString())
+            return storyObj;
+    });
+
+    storyDetail[0].storyLabel = request.query.mStoryLabel;
+    storyDetail[0].storyDescription = request.query.mStoryDescription;
+    storyDetail[0].storyType = request.query.mStoryType;
+    storyDetail[0].storyStatus = request.query.mStoryStatus;
+    storyDetail[0].storyAssignee = request.query.mStoryAssignee;
+    storyDetail[0].storyDeadline = request.query.mStoryDeadline;
+
+
+    // write the file
+    fileSys.writeFileSync("./public/files/" + request.query.mSelectedAppId + ".json", JSON.stringify(storyArray, null, 4));
+
+    // read the file
+    mFileContent = fileSys.readFileSync("./public/files/" + request.query.mSelectedAppId + ".json", "utf-8");
+
+    response.send(mFileContent);
+});
+
 app.get("/getAppStories", function(request, response) {
     var appId = request.query.appId;
 

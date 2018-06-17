@@ -1,11 +1,11 @@
 [
     {
         "storyId": 1529203295844,
-        "storyLabel": "Aaradhya",
+        "storyLabel": "Pallavi",
         "storyDescription": "This is aaradhya",
-        "storyType": "To-do",
-        "storyStatus": "Waiting",
-        "storyAssignee": "Editors",
+        "storyType": "Bug",
+        "storyStatus": "In-progress",
+        "storyAssignee": "Web production",
         "storyDeadline": "urgent"
     },
     {

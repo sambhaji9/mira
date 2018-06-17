@@ -95,8 +95,6 @@ $(document).ready(function() {
 
     $("#mStoryTable").on("click", "td:first-child", function(event) {
         storyId = $(this).closest("tr").attr("id");
-        console.log(storyId);
-        console.log(selectedApp.appId);
 
         // stories length
         var sLength = storyList.length;
@@ -116,20 +114,36 @@ $(document).ready(function() {
             keyboard: false
         });
 
-        // get reference to the input box in updateStoryModal
-        var mStoryLabel = document.getElementById("mStoryLabel");
-        var mStoryDescription = document.getElementById("mStoryDescription");
-        var mStoryType = document.getElementById("mStoryType");
-        var mStoryStatus = document.getElementById("mStoryStatus");
-        var mStoryAssignee = document.getElementById("mStoryAssignee");
-        var mStoryDeadline = document.getElementById("mStoryDeadline");
+        // load the values from the JSON file
+        document.getElementById("mStoryLabel").value = appDetails.storyLabel;
+        document.getElementById("mStoryDescription").value = appDetails.storyDescription;
+        document.getElementById("mStoryType").value = appDetails.storyType;
+        document.getElementById("mStoryStatus").value = appDetails.storyStatus;
+        document.getElementById("mStoryAssignee").value = appDetails.storyAssignee;
+        document.getElementById("mStoryDeadline").value = appDetails.storyDeadline;
+    });
 
-        mStoryLabel.value = appDetails.storyLabel;
-        mStoryDescription.value = appDetails.storyDescription;
-        mStoryType.value = appDetails.storyType;
-        mStoryStatus.value = appDetails.storyStatus;
-        mStoryAssignee.value = appDetails.storyAssignee;
-        mStoryDeadline.value = appDetails.storyDeadline;
+    $("#updateStory").on("click", function() {
+        // hide the modal
+        $("#updateStoryModal").modal('hide');
+
+        $.ajax({
+            url: "http://127.0.0.1:1689/updateStory",
+            data: {
+                "mStoryId": storyId,
+                "mSelectedAppId": selectedApp.appId,
+                "mStoryLabel": document.getElementById("mStoryLabel").value,
+                "mStoryDescription": document.getElementById("mStoryDescription").value,
+                "mStoryType": document.getElementById("mStoryType").value,
+                "mStoryStatus": document.getElementById("mStoryStatus").value,
+                "mStoryAssignee": document.getElementById("mStoryAssignee").value,
+                "mStoryDeadline": document.getElementById("mStoryDeadline").value,
+            },
+            success: function(result) {
+                // show the stories in the middle pane
+                showStoryList(result);
+            }
+        });
     });
 });
 

@@ -33,15 +33,15 @@
         "storyType": "Achievement",
         "storyStatus": "Waiting",
         "storyAssignee": "Editors",
-        "storyDeadline": ""
+        "storyDeadline": "12/06/2018"
     },
     {
         "storyId": 1529211504141,
-        "storyLabel": "",
-        "storyDescription": "",
-        "storyType": "Change request",
-        "storyStatus": "Requirements",
-        "storyAssignee": "Self",
-        "storyDeadline": ""
+        "storyLabel": "Suchitra",
+        "storyDescription": "Suchitra is sexy",
+        "storyType": "Bug",
+        "storyStatus": "Waiting",
+        "storyAssignee": "Web production",
+        "storyDeadline": "Urgent"
     }
 ]
