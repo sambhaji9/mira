@@ -52,6 +52,38 @@ app.get("/getAppDetail", function(request, response) {
     response.send(appDetail[0]);
 });
 
+app.get("/addNewStory", function(request, response) {
+    // read the file
+    var fileContent = fileSys.readFileSync("./public/files/" + request.query.selectedAppId + ".json", "utf-8");
+    // parse the array
+    var storyArray = JSON.parse(fileContent);
+
+    storyArray.push({
+        "storyId": Date.now(),
+        "storyLabel": request.query.storyLabel,
+        "storyDescription": request.query.storyDescription,
+        "storyType": request.query.storyType,
+        "storyStatus": request.query.storyStatus,
+        "storyAssignee": request.query.storyAssignee,
+        "storyDeadline": request.query.storyDeadline
+    });
+
+    // write the file
+    fileSys.writeFileSync("./public/files/" + request.query.selectedAppId + ".json", JSON.stringify(storyArray, null, 4));
+
+    // read the file
+    mFileContent = fileSys.readFileSync("./public/files/" + request.query.selectedAppId + ".json", "utf-8");
+
+    response.send(mFileContent);
+});
+
+app.get("/getAppStories", function(request, response) {
+    var appId = request.query.appId;
+
+    var fileContent = fileSys.readFileSync("./public/files/" + appId + ".json", "utf-8");
+    response.send(fileContent);
+});
+
 app.listen(1689, function() {
     console.log("Server listening on http://localhost:1689/");
 });
