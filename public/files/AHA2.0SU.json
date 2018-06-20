@@ -1,0 +1,11 @@
+[
+    {
+        "storyId": 1529464057248,
+        "storyLabel": "Server update",
+        "storyDescription": "Server update of icons and splash screens in online app",
+        "storyType": "Event",
+        "storyStatus": "Done",
+        "storyAssignee": "Production Programmers",
+        "storyDeadline": "19-June-2018"
+    }
+]

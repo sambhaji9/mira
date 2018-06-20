@@ -1,0 +1,29 @@
+[
+    {
+        "storyId": 1529383279512,
+        "storyLabel": "ASCVD tool",
+        "storyDescription": "Work to remove the bugs in ASCVD tool, upload the tool on ITD.",
+        "storyType": "To-do",
+        "storyStatus": "Waiting",
+        "storyAssignee": "Self",
+        "storyDeadline": "20-June-2018"
+    },
+    {
+        "storyId": 1529462654719,
+        "storyLabel": "Status",
+        "storyDescription": "Send the latest status of the app to Dominik.",
+        "storyType": "To-do",
+        "storyStatus": "Waiting",
+        "storyAssignee": "Self",
+        "storyDeadline": "20-June-2018"
+    },
+    {
+        "storyId": 1529467899824,
+        "storyLabel": "HF Dashboard",
+        "storyDescription": "Send the ACC app dashboard size to Frank,",
+        "storyType": "To-do",
+        "storyStatus": "Waiting",
+        "storyAssignee": "Modules",
+        "storyDeadline": "20-June-2018"
+    }
+]

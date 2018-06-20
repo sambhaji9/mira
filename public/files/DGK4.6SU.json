@@ -1,0 +1,20 @@
+[
+    {
+        "storyId": 1529304481427,
+        "storyLabel": "Aorta guideline",
+        "storyDescription": "DGK app is sent to Apple beta approval.",
+        "storyType": "Event",
+        "storyStatus": "Done",
+        "storyAssignee": "Production Programmers",
+        "storyDeadline": "18/June/2018"
+    },
+    {
+        "storyId": 1529319719560,
+        "storyLabel": "Email to Carla",
+        "storyDescription": "Inform to Carla, when app is sent to external tester. Send user manual to tester",
+        "storyType": "To-do",
+        "storyStatus": "Done",
+        "storyAssignee": "Self",
+        "storyDeadline": "19/June/2018"
+    }
+]

@@ -1,22 +1,30 @@
-[{
-        "appName": "sambhaji",
-        "appVersion": "2.3",
+[
+    {
+        "appName": "Endocrine app",
+        "appVersion": "1.5",
         "appUpdateType": "Technical",
-        "appId": "SAM2.3TU",
-        "date": "6/16/2018, 10:47:37 AM"
+        "appId": "END1.5TU",
+        "date": "6/18/2018, 10:48:19 AM"
     },
     {
-        "appName": "swati",
-        "appVersion": "4.1",
+        "appName": "DGK app",
+        "appVersion": "4.6",
         "appUpdateType": "Server",
-        "appId": "SWA4.1SU",
-        "date": "6/16/2018, 5:58:38 PM"
+        "appId": "DGK4.6SU",
+        "date": "6/18/2018, 12:17:01 PM"
     },
     {
-        "appName": "Anesthesiology pocketcards pocketcards",
+        "appName": "ACC app",
         "appVersion": "3.1",
         "appUpdateType": "Server",
-        "appId": "ANE3.1SU",
-        "date": "6/16/2018, 10:08:03 PM"
+        "appId": "ACC3.1SU",
+        "date": "6/19/2018, 10:10:24 AM"
+    },
+    {
+        "appName": "AHA app",
+        "appVersion": "2.0",
+        "appUpdateType": "Server",
+        "appId": "AHA2.0SU",
+        "date": "6/20/2018, 8:36:46 AM"
     }
 ]
